@@ -3,13 +3,13 @@ package ru.job4j.checkstyle;
 public class Broken {
     public static final String NEWVALUE = "";
 
-    public String surname;
+    private String surname;
 
     private int sizeOfEmpty = 10;
 
-    void echo() { }
+    public void echo() { }
 
-    void media(Object obj) {
+    public void media(Object obj) {
         if (obj != null) {
             System.out.println(obj);
         }

@@ -31,11 +31,9 @@ public class Calculator {
         Calculator calculator = new Calculator();
         int rsl = calculator.multiply(10);
         System.out.println("Multiply " + rsl);
-        Calculator div = new Calculator();
-        int rsl1 = div.divide(10);
+        int rsl1 = calculator.divide(10);
         System.out.println("Divide " + rsl1);
-        Calculator sumAlloper = new Calculator();
-        int rsl2 = sumAlloper.sumAllOperation(10);
+        int rsl2 = calculator.sumAllOperation(10);
         System.out.println("SumAllOperations " + rsl2);
     }
 }

@@ -2,7 +2,6 @@ package ru.job4j.io;
 
 import java.util.Scanner;
 import java.util.Random;
-import java.util.SortedMap;
 
 public class MagicBall {
     public static void main(String[] args) {
@@ -10,12 +9,10 @@ public class MagicBall {
         System.out.print("Я великий Оракул. Что ты хочешь узнать? (Введите закрытый вопрос)");
         String question = input.nextLine();
         int answer = new Random().nextInt(3);
-        if (answer == 0) {
-            System.out.println(question + " Да");
-        } else if (answer == 1) {
-            System.out.println(question + " Нет");
-        } else {
-            System.out.println(question + " Может быть");
+        switch (answer) {
+            case (0) -> System.out.println(question + " Да");
+            case (1) -> System.out.println(question + " Нет");
+            default -> System.out.println(question + " Может быть");
         }
     }
 }

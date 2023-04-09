@@ -23,9 +23,9 @@ public class StartUI {
                 System.out.println("=== Show all items ===");
                 Item[] items = tracker.findAll();
                 if (items.length > 0) {
-                for (Item item : items) {
-                    System.out.println(item);
-                }
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
                 } else {
                     System.out.println("Хранилище еще не содержит заявок");
                 }
@@ -49,6 +49,16 @@ public class StartUI {
                     System.out.println("Заявка удалена успешно.");
                 } else {
                     System.out.println("Ошибка удаления заявки.");
+                }
+            } else if (select == 4) {
+                System.out.println("=== Find item by id ===");
+                System.out.print("Enter id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                Item item = tracker.findById(id);
+                if (item != null) {
+                    System.out.println(item);
+                } else {
+                    System.out.println("Заявка с введенным id: " + id + " не найдена.");
                 }
             }
         }

@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
 public class CreateAction implements UserAction {
-        public String name() {
+    public String name() {
         return "Add new Item";
     }
 

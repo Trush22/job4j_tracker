@@ -1,7 +1,7 @@
 package ru.job4j.ex;
 
 public class User {
-    private static String username;
+    private String username;
     private boolean valid;
 
     public User(String username, boolean valid) {
@@ -9,7 +9,7 @@ public class User {
         this.valid = valid;
     }
 
-    public static String getUsername() {
+    public String getUsername() {
         return username;
     }
 

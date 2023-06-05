@@ -5,7 +5,7 @@ import java.util.Objects;
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         for (User user : users) {
-            if (Objects.equals(user, login)) {
+            if (Objects.equals(user.getUsername(), login)) {
                 return user;
             }
         }
@@ -13,7 +13,7 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (!user.isValid() || User.getUsername().length() < 3) {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("пользователь не валидный");
         }
         return true;
